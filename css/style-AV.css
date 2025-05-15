@@ -1,0 +1,10 @@
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+  }
+
+:root {
+  --bleu_fonce:#C0CFE4;
+  --blanc:white;
+  --bleu_ecriture:#7B879F;
+}
