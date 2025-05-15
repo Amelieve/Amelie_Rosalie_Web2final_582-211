@@ -6,12 +6,10 @@ html {
 
   body {
     font-family: 'Segoe UI', sans-serif;
-  background: 
-    url("../assets/images/fond_sapin.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  outline: 1px dashed red;
+    background: url("../assets/images/fond_sapin.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
   }
   
   header {
