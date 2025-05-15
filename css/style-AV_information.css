@@ -1,0 +1,125 @@
+@media (min-width: 1024px) { 
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        background: url("../assets/images/village_modifier.png");
+       /* background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom; */
+      }
+   
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 30px;
+        background-color: var(--bleu_fonce);
+        color: var(--blanc);
+      }
+    
+      .logo-social {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+    
+      .logo {
+        width: 40%;
+      }
+    
+      .social-icons img {
+        width: 25px;
+        margin-right: 8px;
+        cursor: pointer;
+      }
+    
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+      }
+    
+      nav a {
+        text-decoration: none;
+        color: var(--bleu_fonce);
+        padding: 8px 14px;
+        background-color: var(--blanc);
+        border-radius: 20px;
+        font-size: 14px;
+      }
+}
+
+
+
+
+@media (max-width:1023px) {
+    .burger {
+        font-size: 30px;
+        background: none;
+        border: none;
+        color: var(--blanc);
+        cursor: pointer;
+        display: block; /* Visible uniquement en mobile */
+        position: absolute;
+        top: 15px;
+        right: 15px;
+      }
+    
+      .nav-menu {
+        display: none; /* Masqué par défaut en mobile */
+        background-color: var(--bleu_fonce);
+        width: 100%;
+      }
+    
+      .nav-menu.active {
+        display: block;
+      }
+    
+      .nav-menu ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 10px 0;
+      }
+    
+      .nav-menu a {
+        text-decoration: none;
+        color: var(--blanc);
+        background-color: transparent;
+        border-radius: 20px;
+        padding: 8px 14px;
+        font-size: 18px;
+      }
+    
+ }
+
+ @media (min-width: 1024px) {
+  .burger {
+    display: none;
+  }
+
+  .nav-menu {
+    display: block;
+  }
+
+  .nav-menu ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .nav-menu a {
+    text-decoration: none;
+    color: var(--blanc);
+    background-color: #e0e0e0;
+    border-radius: 20px;
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+}
