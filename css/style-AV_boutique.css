@@ -1,10 +1,84 @@
-body {
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
-  }
 
-:root {
-  --bleu_fonce:#C0CFE4;
-  --blanc:white;
-  --bleu_ecriture:#7B879F;
-}
+@media (min-width: 1024px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom, #d0eaff, #ffffff);
+    color: var(--bleu_fonce);
+  }
+  
+  header {
+    background-color: #002c5f;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 10px;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .hero {
+    background: url('background-hero.jpg') center/cover no-repeat;
+    padding: 100px 20px;
+    text-align: center;
+    color: white;
+  }
+  
+  .shop {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .items {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+  }
+  
+  .item {
+    background-color: #f4f9ff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 150px;
+  }
+  
+  .item img {
+    width: 100%;
+    height: auto;
+  }
+  
+  button {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    background-color: #002c5f;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  footer {
+    background-color: #002c5f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  } 
+  }
