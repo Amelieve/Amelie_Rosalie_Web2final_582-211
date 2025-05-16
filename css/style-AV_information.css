@@ -1,7 +1,7 @@
 html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
-  height: 100%;
 }
 
 body {
@@ -10,188 +10,367 @@ body {
   min-height: 100vh;
 }
 
-.wrapper {
+.page-wrapper {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-main {
-  padding-bottom: 100px;
+.main-content {
+  flex: 1;
+  padding: 40px;
 }
 
 @media (min-width: 1024px) { 
-    body {
-        font-family: 'Segoe UI', sans-serif;
-        background: url("../assets/images/village_hiver.jpg");
-       background-repeat:no-repeat;
-      }
-   
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 30px;
-        background-color: var(--bleu_fonce);
-        color: var(--blanc);
-      }
-    
-      .logo-social {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-      }
-    
-      .logo {
-        width: 40%;
-      }
-    
-      .social-icons img {
-        width: 25px;
-        margin-right: 8px;
-        cursor: pointer;
-      }
-    
-      nav ul {
-        list-style: none;
-        display: flex;
-        gap: 20px;
-      }
-    
-      nav a {
-        text-decoration: none;
-        color: var(--bleu_fonce);
-        padding: 8px 14px;
-        background-color: var(--blanc);
-        border-radius: 20px;
-        font-size: 14px;
-      }
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: url("../assets/images/village_hiver.jpg");
+    background-repeat: no-repeat;
+  }
 
-      main {
-        display: flex;
-        justify-content: space-between;
-        padding: 40px;
-        color:var(--bleu_ecriture)
-      }
-  
-      .texte {
-        font-size:20px;
-      }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: var(--bleu_fonce);
+    color: var(--blanc);
+  }
 
-      .section {
-        width: 45%;
-        padding: 20px;
-        border-radius: 15px;
-      }
-  
-      .section h2 {
-        margin-bottom: 10px;
-      }
-  
-      .section p {
-        margin-bottom: 10px;
-      }
-  
-      .acheter-btn {
-        display: inline-block;
-        padding: 5px 15px;
-        background-color:var(--blanc);
-        border: 2px solid var(--blanc);
-        border-radius: 20px;
-        text-decoration: none;
-        color: var(--bleu_ecriture);
-        font-weight: bold;
-      }
-  
-      .sapin-img {
-        max-width: 300px;
-        display: block;
-        margin-top: 10px;
-      }
+  .logo-social {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
 
-      footer {
-        background-color: var(--bleu_fonce);
-        padding: 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        font-size: 0.9em;
-      }
-      
-      .copyright{
-        color:var(--blanc);
-      }
+  .logo {
+    width: 40%;
+  }
 
-      .infolettre {
-        display: flex;
-        flex-direction: column;
-        color:var(--blanc);
-      }
+  .social-icons img {
+    width: 25px;
+    margin-right: 8px;
+    cursor: pointer;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: var(--bleu_fonce);
+    padding: 8px 14px;
+    background-color: var(--blanc);
+    border-radius: 20px;
+    font-size: 14px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  nav a:hover {
+    background-color: var(--bleu_fonce);
+    color: var(--blanc);
+  }
+
+  main {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    color: var(--bleu_ecriture);
+  }
+
+  .texte {
+    font-size: 20px;
+  }
+
+  .section {
+    width: 45%;
+    padding: 20px;
+    border-radius: 15px;
+  }
+
+  .section h2 {
+    margin-bottom: 10px;
+  }
+
+  .section p {
+    margin-bottom: 10px;
+  }
+
+  .acheter-btn {
+    display: inline-block;
+    padding: 5px 15px;
+    background-color: var(--blanc);
+    border: 2px solid var(--blanc);
+    border-radius: 20px;
+    text-decoration: none;
+    color: var(--bleu_ecriture);
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  }
+
+  .acheter-btn:hover {
+    background-color: var(--bleu_ecriture);
+    color: var(--blanc);
+    border-color: var(--bleu_ecriture);
+  }
+
+  .sapin-img {
+    max-width: 300px;
+    display: block;
+    margin-top: 10px;
+  }
+
+  footer {
+    background-color: var(--bleu_fonce);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-size: 0.9em;
+  }
+
+  .copyright {
+    color: var(--blanc);
+  }
+
+  .infolettre {
+    display: flex;
+    flex-direction: column;
+    color: var(--blanc);
+  }
+
+  .infolettre input[type="text"],
+  .infolettre input[type="email"] {
+    padding: 5px;
+    border: 1px solid var(--blanc);
+    border-radius: 5px;
+  }
+
+  .infolettre button {
+    padding: 5px 10px;
+    background-color: var(--blanc);
+    color: var(--bleu_fonce);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .infolettre button:hover {
+    background-color: var(--bleu_ecriture);
+  }
+
+   /*.traineau {
+    position: fixed;
+    top: 100px; /* hauteur du passage */
+    left: -200px; /* hors écran à gauche 
+    width: 200px;
+    z-index: 9999;
+    animation: passage-traineau 8s linear forwards;
+  }
   
-      .infolettre input[type="text"],
-      .infolettre input[type="email"] {
-        padding: 5px;
-        border: 1px solid var(--bl);
-        border-radius: 5px;
-      }
-  
-      .infolettre button {
-        padding: 5px 10px;
-        border: none;
-        background-color:var(--blanc);
-        border-radius: 5px;
-        cursor: pointer;
-      }
+  /* Animation en 4 étapes 
+  @keyframes passage-traineau {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(25vw);
+    }
+    50% {
+      transform: translateX(50vw);
+    }
+    75% {
+      transform: translateX(75vw);
+    }
+    100% {
+      transform: translateX(110vw); /* sort de l'écran à droite 
+    }
+  } */
 }
 
 
 
 
-@media (max-width:1023px) {
-    .burger {
-        font-size: 30px;
-        background: none;
-        border: none;
-        color: var(--blanc);
-        cursor: pointer;
-        display: block; /* Visible uniquement en mobile */
-        position: absolute;
-        top: 15px;
-        right: 15px;
-      }
-    
-      .nav-menu {
-        display: none; /* Masqué par défaut en mobile */
-        background-color: var(--bleu_fonce);
-        width: 100%;
-      }
-    
-      .nav-menu.active {
-        display: block;
-      }
-    
-      .nav-menu ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-        padding: 10px 0;
-      }
-    
-      .nav-menu a {
-        text-decoration: none;
-        color: var(--blanc);
-        background-color: transparent;
-        border-radius: 20px;
-        padding: 8px 14px;
-        font-size: 18px;
-      }
-    
- }
+@media (max-width: 1023px) {
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: url("../assets/images/village_hiver.jpg") no-repeat left bottom;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: left bottom;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
 
+  .page-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  header {
+    background-color: var(--bleu_fonce);
+    color: var(--blanc);
+    padding: 15px;
+    position: relative;
+    text-align: center;
+  }
+
+  .logo-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo {
+    width: 70%;
+    max-width: 200px;
+  }
+
+  .burger {
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: var(--blanc);
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+
+  .nav-menu {
+    display: none;
+    background-color: var(--bleu_fonce);
+    width: 100%;
+  }
+
+  .nav-menu.active {
+    display: block;
+  }
+
+  .nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+  .nav-menu a {
+    color: var(--blanc);
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .nav-menu a:hover {
+    background-color: var(--blanc);
+    color: var(--bleu_fonce);
+    border-radius: 15px;
+    padding: 6px 12px;
+  }
+
+  .main-content {
+    padding: 20px;
+    color: var(--bleu_ecriture);
+  }
+
+  .section {
+    margin-bottom: 30px;
+    padding: 10px;
+    border-radius: 15px;
+  }
+
+  .section h1,
+  .section h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .texte {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .sapin-img {
+    width: 100%;
+    max-width: 300px;
+    display: block;
+    margin: 15px auto;
+  }
+
+  .acheter-btn {
+    display: block;
+    margin: 0 auto 15px auto;
+    padding: 8px 16px;
+    background-color: var(--blanc);
+    border: 2px solid var(--bleu_ecriture);
+    border-radius: 20px;
+    color: var(--bleu_ecriture);
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .acheter-btn:hover {
+    background-color: var(--bleu_ecriture);
+    color: var(--blanc);
+  }
+
+  footer {
+    background-color: var(--bleu_fonce);
+    color: var(--blanc);
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+  }
+
+  .infolettre {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .infolettre input {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+  }
+
+  .infolettre button {
+    padding: 10px;
+    background-color: var(--blanc);
+    color: var(--bleu_fonce);
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .infolettre button:hover {
+    background-color: var(--bleu_ecriture);
+    color: var(--blanc);
+  }
+
+  .copyright {
+    font-size: 0.8rem;
+  }
+}
  @media (min-width: 1024px) {
   .burger {
     display: none;

@@ -47,6 +47,11 @@ html, body {
     width: 25px;
     margin-right: 8px;
     cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .social-icons img:hover {
+    transform: scale(1.2);
   }
 
   nav ul {
@@ -62,6 +67,12 @@ html, body {
     background-color: var(--blanc);
     border-radius: 20px;
     font-size: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  nav a:hover {
+    background-color: var(--bleu_fonce);
+    color: var(--blanc);
   }
 
   .section-wrapper {
@@ -88,6 +99,7 @@ html, body {
     text-align: left;
     min-width: 250px;
     color: var(--bleu_ecriture);
+    font-weight: bold;
   }
 
   .shop {
@@ -110,6 +122,12 @@ html, body {
     width: 150px;
     text-align: center;
     color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
   }
 
   .item img {
@@ -125,6 +143,12 @@ html, body {
     color: var(--blanc);
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  button:hover {
+    background-color: var(--blanc);
+    color: var(--bleu_fonce);
   }
 
   footer {
@@ -134,8 +158,6 @@ html, body {
     padding: 20px;
   }
 }
-
-
 
 
 
@@ -185,6 +207,12 @@ html, body {
   .social-icons img {
     width: 25px;
     margin: 0 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .social-icons img:hover {
+    transform: scale(1.2);
   }
 
   /* MENU BURGER */
@@ -201,7 +229,7 @@ html, body {
   }
 
   .nav-menu {
-    display: none; /* Masqué par défaut en mobile */
+    display: none;
     background-color: var(--bleu_fonce);
     width: 100%;
   }
@@ -228,12 +256,19 @@ html, body {
     border-radius: 20px;
     padding: 8px 14px;
     font-size: 18px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .nav-menu a:hover {
+    background-color: var(--blanc);
+    color: var(--bleu_fonce);
   }
 
   .boutique {
     padding: 20px;
     text-align: center;
     flex: 1;
+    color:var(--bleu_ecriture)
   }
 
   .boutique-layout {
@@ -257,6 +292,12 @@ html, body {
     width: 80%;
     max-width: 250px;
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
   }
 
   .item img {
@@ -272,6 +313,12 @@ html, body {
     color: var(--blanc);
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  button:hover {
+    background-color: var(--blanc);
+    color: var(--bleu_fonce);
   }
 
   footer {
@@ -281,7 +328,6 @@ html, body {
     padding: 20px;
   }
 }
-
 /* VERSION DESKTOP (min-width > 1023px) */
 @media (min-width: 1024px) {
   .burger {
