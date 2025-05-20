@@ -18,59 +18,75 @@ html, body {
 
   body {
     font-family: 'Segoe UI', sans-serif;
+   /* Mettre l'image de fond*/
     background: url("../assets/images/fond_sapin.png");
+     /* Ajuster pour que celui-ci fit le site*/
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
   }
 
   header {
+     /* Mise en espace des éléments du header*/
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
+     /* Couleur du header */
     background-color: var(--bleu_fonce);
     color: var(--blanc);
   }
 
   .logo-social {
+     /* Mise en espace des logos*/
     display: flex;
     align-items: center;
     gap: 15px;
   }
 
   .logo {
+     /* Taille du logo principal du header*/
     width: 40%;
   }
 
   .social-icons img {
+     /* Taille des logos du header*/
     width: 25px;
     margin-right: 8px;
+     /* Animation pour les logos*/
     cursor: pointer;
     transition: transform 0.3s ease;
   }
-
-  .social-icons img:hover {
+ /* Animations pour les logos*/
+  .social-icons img:hover { 
+    /* Agrendissement*/
     transform: scale(1.2);
   }
 
   nav ul {
+     /* Visiuel des liens*/
     list-style: none;
+     /* Positionnement des liens*/
     display: flex;
     gap: 20px;
   }
 
   nav a {
+     /* Visuel des liens*/
     text-decoration: none;
     color: var(--bleu_fonce);
+     /* Positionnement des liens*/
     padding: 8px 14px;
+     /* Visuel des liens*/
     background-color: var(--blanc);
     border-radius: 20px;
     font-size: 14px;
+     /* Animation des liens*/
     transition: background-color 0.3s ease, color 0.3s ease;
   }
 
   nav a:hover {
+     /* Animation couleurs des liens*/
     background-color: var(--bleu_fonce);
     color: var(--blanc);
   }
@@ -81,10 +97,12 @@ html, body {
   }
 
   .boutique {
+     /* Mise en esapce des éléments*/
     padding: 50px 20px;
   }
 
   .boutique-layout {
+     /* Mise en espace des éléments à l'intérieur*/
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -95,6 +113,7 @@ html, body {
   }
 
   .boutique-text {
+    /* Mise en espace du texte des éléments de la boutique*/
     flex: 1;
     text-align: left;
     min-width: 250px;
@@ -103,57 +122,73 @@ html, body {
   }
 
   .shop {
+       /* Mise en esapce des éléments*/
     flex: 1;
     display: flex;
     justify-content: center;
   }
 
   .shop-layout {
+       /* Mise en esapce des éléments*/
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
 
   .item {
+       /* Visuel des items*/
     background-color: var(--bleu_fonce);
     border-radius: 12px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+       /* Taille des photos*/
     width: 150px;
+       /* Positionnement des photos*/
     text-align: center;
+       /* Couleur de l'item*/
     color: white;
+       /* Animation des images*/
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
 
   .item:hover {
+       /* Animation des images, agrandissement*/
     transform: translateY(-5px);
+       /* Visuel de l'animation*/
     box-shadow: 0 6px 12px rgba(0,0,0,0.2);
   }
 
   .item img {
+       /* Mise en espace*/
     width: 100%;
     height: auto;
   }
 
   button {
+       /*Visuel des bouttons de la boutique*/
     margin-top: 10px;
     padding: 10px;
     border: solid;
+     /*Couleur*/
     background-color: var(--bleu_fonce);
     color: var(--blanc);
     border-radius: 5px;
+     /*Animation des bouttons de la boutique*/
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
   }
 
   button:hover {
+     /*Animation des bouttons de la boutique, changement des couleurs*/
     background-color: var(--blanc);
     color: var(--bleu_fonce);
   }
 
-  footer {
+  footer { 
+    /*Couleur du footer*/
     background-color: var(--bleu_fonce);
     color: var(--blanc);
+     /*Mise en espace du footer*/
     text-align: center;
     padding: 20px;
   }
@@ -162,36 +197,42 @@ html, body {
 
 
 
-
+/* ==== VERSION MOBILE (max-width: 1023px) ==== */
 @media (max-width:1023px) {
+
+  /* On réinitialise les marges/paddings de base */
   html, body {
     height: 100%;
     margin: 0;
     padding: 0;
   }
-  
+
+  /* Fond mobile + typographie */
   body {
     font-family: 'Segoe UI', sans-serif;
     background: url("../assets/images/fond_sapin.png") no-repeat left bottom;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: left bottom;
+    background-size: cover; /* L’image couvre toute la surface */
+    background-attachment: fixed; /* Fond fixe même en scroll */
+    background-position: left bottom; /* Position du fond */
   }
 
+  /* Structure principale verticale sur toute la hauteur */
   .page-wrapper {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
   }
 
+  /* En-tête mobile centré avec fond coloré */
   header {
     background-color: var(--bleu_fonce);
     color: var(--blanc);
     padding: 15px;
     text-align: center;
-    position: relative;
+    position: relative; /* Nécessaire pour placer le menu burger */
   }
 
+  /* Bloc logo et icônes centré verticalement */
   .logo-social {
     display: flex;
     flex-direction: column;
@@ -199,11 +240,13 @@ html, body {
     gap: 10px;
   }
 
+  /* Logo redimensionné pour le mobile */
   .logo {
     width: 80%;
     max-width: 200px;
   }
 
+  /* Icônes sociales avec effet au survol */
   .social-icons img {
     width: 25px;
     margin: 0 5px;
@@ -215,29 +258,33 @@ html, body {
     transform: scale(1.2);
   }
 
-  /* MENU BURGER */
+  /* ===== MENU BURGER ===== */
   .burger {
     font-size: 30px;
     background: none;
     border: none;
     color: var(--blanc);
     cursor: pointer;
-    display: block; /* Visible uniquement en mobile */
+
+    display: block; /* Visible seulement sur mobile */
     position: absolute;
     top: 15px;
-    right: 15px;
+    right: 15px; /* Coin supérieur droit */
   }
 
+  /* Menu caché par défaut */
   .nav-menu {
     display: none;
     background-color: var(--bleu_fonce);
     width: 100%;
   }
 
+  /* Menu visible lorsqu'il est actif (via JS) */
   .nav-menu.active {
     display: block;
   }
 
+  /* Liste du menu vertical centrée */
   .nav-menu ul {
     list-style: none;
     margin: 0;
@@ -249,6 +296,7 @@ html, body {
     padding: 10px 0;
   }
 
+  /* Liens du menu */
   .nav-menu a {
     text-decoration: none;
     color: var(--blanc);
@@ -264,19 +312,22 @@ html, body {
     color: var(--bleu_fonce);
   }
 
+  /* Section boutique mobile */
   .boutique {
     padding: 20px;
     text-align: center;
     flex: 1;
-    color:var(--bleu_ecriture)
+    color: var(--bleu_ecriture);
   }
 
+  /* Mise en page colonne pour les blocs */
   .boutique-layout {
     display: flex;
     flex-direction: column;
     gap: 30px;
   }
 
+  /* Mise en grille des articles (1 colonne) */
   .shop-layout {
     display: grid;
     grid-template-columns: 1fr;
@@ -284,6 +335,7 @@ html, body {
     justify-items: center;
   }
 
+  /* Bloc article individuel */
   .item {
     background-color: var(--bleu_fonce);
     color: white;
@@ -300,11 +352,13 @@ html, body {
     box-shadow: 0 6px 12px rgba(0,0,0,0.2);
   }
 
+  /* Image dans chaque article */
   .item img {
     width: 100%;
     height: auto;
   }
 
+  /* Bouton d'achat */
   button {
     margin-top: 10px;
     padding: 10px;
@@ -321,6 +375,7 @@ html, body {
     color: var(--bleu_fonce);
   }
 
+  /* Pied de page mobile */
   footer {
     background-color: var(--bleu_fonce);
     color: var(--blanc);
@@ -328,16 +383,20 @@ html, body {
     padding: 20px;
   }
 }
-/* VERSION DESKTOP (min-width > 1023px) */
+/* ==== VERSION DESKTOP (min-width > 1023px) ==== */
 @media (min-width: 1024px) {
+  
+  /* Le menu burger n'apparaît pas en version bureau */
   .burger {
     display: none;
   }
 
+  /* Menu toujours visible sur bureau */
   .nav-menu {
     display: block;
   }
 
+  /* Menu horizontal */
   .nav-menu ul {
     display: flex;
     gap: 20px;
@@ -347,6 +406,7 @@ html, body {
     justify-content: center;
   }
 
+  /* Liens stylés pour bureau */
   .nav-menu a {
     text-decoration: none;
     color: var(--blanc);

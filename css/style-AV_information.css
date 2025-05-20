@@ -1,400 +1,385 @@
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.page-wrapper {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.main-content {
-  flex: 1;
-  padding: 40px;
-}
-
-@media (min-width: 1024px) { 
-  body {
-    font-family: 'Segoe UI', sans-serif;
-    background: url("../assets/images/village_hiver.jpg");
-    background-repeat: no-repeat;
-  }
-
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-    background-color: var(--bleu_fonce);
-    color: var(--blanc);
-  }
-
-  .logo-social {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-  }
-
-  .logo {
-    width: 40%;
-  }
-
-  .social-icons img {
-    width: 25px;
-    margin-right: 8px;
-    cursor: pointer;
-  }
-
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
-
-  nav a {
-    text-decoration: none;
-    color: var(--bleu_fonce);
-    padding: 8px 14px;
-    background-color: var(--blanc);
-    border-radius: 20px;
-    font-size: 14px;
-    transition: background-color 0.3s, color 0.3s;
-  }
-
-  nav a:hover {
-    background-color: var(--bleu_fonce);
-    color: var(--blanc);
-  }
-
-  main {
-    display: flex;
-    justify-content: space-between;
-    padding: 40px;
-    color: var(--bleu_ecriture);
-  }
-
-  .texte {
-    font-size: 20px;
-  }
-
-  .section {
-    width: 45%;
-    padding: 20px;
-    border-radius: 15px;
-  }
-
-  .section h2 {
-    margin-bottom: 10px;
-  }
-
-  .section p {
-    margin-bottom: 10px;
-  }
-
-  .acheter-btn {
-    display: inline-block;
-    padding: 5px 15px;
-    background-color: var(--blanc);
-    border: 2px solid var(--blanc);
-    border-radius: 20px;
-    text-decoration: none;
-    color: var(--bleu_ecriture);
-    font-weight: bold;
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-  }
-
-  .acheter-btn:hover {
-    background-color: var(--bleu_ecriture);
-    color: var(--blanc);
-    border-color: var(--bleu_ecriture);
-  }
-
-  .sapin-img {
-    max-width: 300px;
-    display: block;
-    margin-top: 10px;
-  }
-
-  footer {
-    background-color: var(--bleu_fonce);
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    font-size: 0.9em;
-  }
-
-  .copyright {
-    color: var(--blanc);
-  }
-
-  .infolettre {
-    display: flex;
-    flex-direction: column;
-    color: var(--blanc);
-  }
-
-  .infolettre input[type="text"],
-  .infolettre input[type="email"] {
-    padding: 5px;
-    border: 1px solid var(--blanc);
-    border-radius: 5px;
-  }
-
-  .infolettre button {
-    padding: 5px 10px;
-    background-color: var(--blanc);
-    color: var(--bleu_fonce);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-
-  .infolettre button:hover {
-    background-color: var(--bleu_ecriture);
-  }
-
-   /*.traineau {
-    position: fixed;
-    top: 100px; /* hauteur du passage */
-    left: -200px; /* hors écran à gauche 
-    width: 200px;
-    z-index: 9999;
-    animation: passage-traineau 8s linear forwards;
+/* =========================
+   Styles Globaux & Reset
+   ========================= */
+   html, body {
+    height: 100%;              /* Pleine hauteur pour toute la fenêtre */
+    margin: 0;                 /* Supprimer marges par défaut */
+    padding: 0;                /* Supprimer paddings par défaut */
   }
   
-  /* Animation en 4 étapes 
-  @keyframes passage-traineau {
-    0% {
-      transform: translateX(0);
-    }
-    25% {
-      transform: translateX(25vw);
-    }
-    50% {
-      transform: translateX(50vw);
-    }
-    75% {
-      transform: translateX(75vw);
-    }
-    100% {
-      transform: translateX(110vw); /* sort de l'écran à droite 
-    }
-  } */
-}
-
-
-
-
-@media (max-width: 1023px) {
   body {
-    font-family: 'Segoe UI', sans-serif;
-    background: url("../assets/images/village_hiver.jpg") no-repeat left bottom;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: left bottom;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    display: flex;             /* Flex container vertical */
+    flex-direction: column;    /* Empiler header, main, footer */
+    min-height: 100vh;         /* Hauteur minimale = hauteur de la fenêtre */
+    font-family: 'Segoe UI', sans-serif; /* Police générale */
   }
-
+  
+  /* Wrapper principal qui prend toute la hauteur disponible */
   .page-wrapper {
+    flex: 1;                   /* Prend tout l’espace vertical restant */
     display: flex;
     flex-direction: column;
-    flex: 1;
   }
-
-  header {
-    background-color: var(--bleu_fonce);
-    color: var(--blanc);
-    padding: 15px;
-    position: relative;
-    text-align: center;
-  }
-
-  .logo-social {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .logo {
-    width: 70%;
-    max-width: 200px;
-  }
-
-  .burger {
-    font-size: 30px;
-    background: none;
-    border: none;
-    color: var(--blanc);
-    cursor: pointer;
-    display: block;
-    position: absolute;
-    top: 15px;
-    right: 15px;
-  }
-
-  .nav-menu {
-    display: none;
-    background-color: var(--bleu_fonce);
-    width: 100%;
-  }
-
-  .nav-menu.active {
-    display: block;
-  }
-
-  .nav-menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    padding: 10px 0;
-  }
-
-  .nav-menu a {
-    color: var(--blanc);
-    text-decoration: none;
-    font-size: 16px;
-    transition: background-color 0.3s, color 0.3s;
-  }
-
-  .nav-menu a:hover {
-    background-color: var(--blanc);
-    color: var(--bleu_fonce);
-    border-radius: 15px;
-    padding: 6px 12px;
-  }
-
+  
+  /* Contenu principal avec un padding généreux */
   .main-content {
-    padding: 20px;
-    color: var(--bleu_ecriture);
+    flex: 1;                   /* Prend toute la place dans le wrapper */
+    padding: 40px;
+    color: var(--bleu_ecriture); /* Couleur du texte principale */
   }
+  
+  /* =========================
+     Version Desktop (≥ 1024px)
+     ========================= */
+  @media (min-width: 1024px) {
+  
+    body {
+      background: url("../assets/images/village_hiver.jpg") no-repeat center center fixed;
+      background-size: cover;       /* Image de fond couvrant toute la fenêtre */
+    }
+  
+    /* Header : barre horizontale avec logo à gauche et navigation à droite */
+    header {
+      display: flex;
+      justify-content: space-between; /* Espace max entre logo et nav */
+      align-items: center;             /* Alignement vertical centré */
+      padding: 15px 30px;
+      background-color: var(--bleu_fonce);
+      color: var(--blanc);
+    }
+  
+    /* Conteneur pour logo + icônes sociales */
+    .logo-social {
+      display: flex;
+      align-items: center;
+      gap: 15px;                     /* Espacement entre logo et icônes */
+    }
+  
+    /* Logo prend 40% de la largeur du conteneur */
+    .logo {
+      width: 40%;
+    }
+  
+    /* Style des icônes sociales dans header */
+    .social-icons img {
+      width: 25px;
+      margin-right: 8px;
+      cursor: pointer;
+    }
+  
+    /* Navigation principale horizontale */
+    nav ul {
+      list-style: none;              /* Supprime les puces */
+      display: flex;
+      gap: 20px;                    /* Espace entre les liens */
+    }
+  
+    /* Style des liens dans le menu */
+    nav a {
+      text-decoration: none;
+      color: var(--bleu_fonce);
+      padding: 8px 14px;
+      background-color: var(--blanc);
+      border-radius: 20px;
+      font-size: 14px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+  
+    /* Effet hover des liens */
+    nav a:hover {
+      background-color: var(--bleu_fonce);
+      color: var(--blanc);
+    }
+  
+    /* Contenu principal en 2 colonnes */
+    main {
+      display: flex;
+      justify-content: space-between;
+      padding: 40px;
+      color: var(--bleu_ecriture);
+    }
+  
+    /* Texte important avec une taille plus grande */
+    .texte {
+      font-size: 20px;
+    }
+  
+    /* Chaque section prend environ la moitié de la largeur */
+    .section {
+      width: 45%;
+      padding: 20px;
+      border-radius: 15px;
 
-  .section {
-    margin-bottom: 30px;
-    padding: 10px;
-    border-radius: 15px;
+    }
+  
+    /* Marges basses pour titres et paragraphes */
+    .section h2,
+    .section p {
+      margin-bottom: 10px;
+    }
+  
+    /* Bouton "acheter" stylisé */
+    .acheter-btn {
+      display: inline-block;
+      padding: 5px 15px;
+      background-color: var(--blanc);
+      border: 2px solid var(--blanc);
+      border-radius: 20px;
+      color: var(--bleu_ecriture);
+      font-weight: bold;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+  
+    /* Hover bouton inverse les couleurs */
+    .acheter-btn:hover {
+      background-color: var(--bleu_ecriture);
+      color: var(--blanc);
+      border-color: var(--bleu_ecriture);
+    }
+  
+    /* Image sapin avec largeur max, marge haute */
+    .sapin-img {
+      max-width: 300px;
+      display: block;
+      margin-top: 10px;
+    }
+  
+    /* Footer : barre basse avec fond et texte blanc */
+    footer {
+      background-color: var(--bleu_fonce);
+      padding: 20px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      font-size: 0.9em;
+      color: var(--blanc);
+    }
+  
+    /* Formulaire infolettre en colonne */
+    .infolettre {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    /* Champs texte et email avec bord blanc et arrondi */
+    .infolettre input[type="text"],
+    .infolettre input[type="email"] {
+      padding: 5px;
+      margin-bottom: 5px;
+      border: 1px solid var(--blanc);
+      border-radius: 5px;
+      color: var(--bleu_fonce);
+    }
+  
+    /* Bouton soumission infolettre */
+    .infolettre button {
+      padding: 5px 10px;
+      background-color: var(--blanc);
+      color: var(--bleu_fonce);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+  
+    /* Hover bouton infolettre */
+    .infolettre button:hover {
+      background-color: var(--bleu_ecriture);
+      color: var(--blanc);
+    }
   }
-
-  .section h1,
-  .section h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
+  
+  /* =========================
+     Version Mobile (< 1024px)
+     ========================= */
+  @media (max-width: 1023px) {
+  
+    body {
+      background: url("../assets/images/village_hiver.jpg") no-repeat left bottom fixed;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+  
+    .page-wrapper {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    /* Header centré avec fond et texte blanc */
+    header {
+      background-color: var(--bleu_fonce);
+      color: var(--blanc);
+      padding: 15px;
+      position: relative; /* Pour placer le bouton burger */
+      text-align: center;
+    }
+  
+    /* Conteneur logo + icônes sociales empilés verticalement */
+    .logo-social {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  
+    /* Logo plus large, max 200px */
+    .logo {
+      width: 70%;
+      max-width: 200px;
+    }
+  
+    /* Bouton burger positionné en haut à droite */
+    .burger {
+      font-size: 30px;
+      background: none;
+      border: none;
+      color: var(--blanc);
+      cursor: pointer;
+      display: block;
+      position: absolute;
+      top: 15px;
+      right: 15px;
+    }
+  
+    /* Menu de navigation caché par défaut */
+    .nav-menu {
+      display: none;
+      background-color: var(--bleu_fonce);
+      width: 100%;
+    }
+  
+    /* Menu visible quand actif */
+    .nav-menu.active {
+      display: block;
+    }
+  
+    /* Liste menu verticale, centrée */
+    .nav-menu ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 0;
+      list-style: none;
+    }
+  
+    /* Liens du menu mobile */
+    .nav-menu a {
+      color: var(--blanc);
+      text-decoration: none;
+      font-size: 16px;
+      padding: 6px 12px;
+      border-radius: 15px;
+      transition: all 0.3s;
+    }
+  
+    /* Hover liens menu */
+    .nav-menu a:hover {
+      background-color: var(--blanc);
+      color: var(--bleu_fonce);
+    }
+  
+    /* Contenu principal avec padding réduit */
+    .main-content {
+      padding: 20px;
+      color: var(--bleu_ecriture);
+    }
+  
+    /* Sections avec marge basse */
+    .section {
+      margin-bottom: 30px;
+      padding: 10px;
+      border-radius: 15px;
+    }
+  
+    /* Titres plus petits */
+    .section h1,
+    .section h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+  
+    /* Texte plus petit et espacé */
+    .texte {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+  
+    /* Image sapin responsive, centrée */
+    .sapin-img {
+      width: 100%;
+      max-width: 300px;
+      display: block;
+      margin: 15px auto;
+    }
+  
+    /* Bouton achat centré, plus large */
+    .acheter-btn {
+      display: block;
+      margin: 0 auto 15px auto;
+      padding: 8px 16px;
+      background-color: var(--blanc);
+      border: 2px solid var(--bleu_ecriture);
+      border-radius: 20px;
+      color: var(--bleu_ecriture);
+      text-decoration: none;
+      font-weight: bold;
+      text-align: center;
+      transition: background-color 0.3s, color 0.3s;
+    }
+  
+    .acheter-btn:hover {
+      background-color: var(--bleu_ecriture);
+      color: var(--blanc);
+    }
+  
+    /* Footer centré et espacé */
+    footer {
+      background-color: var(--bleu_fonce);
+      color: var(--blanc);
+      padding: 15px;
+      text-align: center;
+      font-size: 0.9em;
+    }
+  
+    /* Formulaire infolettre empilé, centré */
+    .infolettre {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+  
+    /* Champs formulaire mobiles */
+    .infolettre input[type="text"],
+    .infolettre input[type="email"] {
+      width: 80%;
+      padding: 6px;
+      border: 1px solid var(--blanc);
+      border-radius: 5px;
+      color: var(--bleu_fonce);
+    }
+  
+    /* Bouton infolettre mobile */
+    .infolettre button {
+      width: 80%;
+      padding: 8px;
+      background-color: var(--blanc);
+      color: var(--bleu_fonce);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+  
+    .infolettre button:hover {
+      background-color: var(--bleu_ecriture);
+      color: var(--blanc);
+    }
   }
-
-  .texte {
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-
-  .sapin-img {
-    width: 100%;
-    max-width: 300px;
-    display: block;
-    margin: 15px auto;
-  }
-
-  .acheter-btn {
-    display: block;
-    margin: 0 auto 15px auto;
-    padding: 8px 16px;
-    background-color: var(--blanc);
-    border: 2px solid var(--bleu_ecriture);
-    border-radius: 20px;
-    color: var(--bleu_ecriture);
-    text-decoration: none;
-    font-weight: bold;
-    text-align: center;
-    transition: background-color 0.3s, color 0.3s;
-  }
-
-  .acheter-btn:hover {
-    background-color: var(--bleu_ecriture);
-    color: var(--blanc);
-  }
-
-  footer {
-    background-color: var(--bleu_fonce);
-    color: var(--blanc);
-    padding: 20px;
-    text-align: center;
-    margin-top: auto;
-  }
-
-  .infolettre {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 10px;
-  }
-
-  .infolettre input {
-    padding: 8px;
-    border-radius: 5px;
-    border: none;
-  }
-
-  .infolettre button {
-    padding: 10px;
-    background-color: var(--blanc);
-    color: var(--bleu_fonce);
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-  }
-
-  .infolettre button:hover {
-    background-color: var(--bleu_ecriture);
-    color: var(--blanc);
-  }
-
-  .copyright {
-    font-size: 0.8rem;
-  }
-}
- @media (min-width: 1024px) {
-  .burger {
-    display: none;
-  }
-
-  .nav-menu {
-    display: block;
-  }
-
-  .nav-menu ul {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    justify-content: center;
-  }
-
-  .nav-menu a {
-    text-decoration: none;
-    color: var(--blanc);
-    background-color: #e0e0e0;
-    border-radius: 20px;
-    padding: 8px 14px;
-    font-size: 14px;
-  }
-}
