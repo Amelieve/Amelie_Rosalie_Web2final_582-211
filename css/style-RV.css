@@ -1,16 +1,15 @@
+/* =========================
+   Styles Globaux & Reset
+   ========================= */
+
+   /* Couleur utiliser pour le site */
 :root {
     --bleu_fonce:#C0CFE4;
     --blanc:white;
     --bleu_ecriture:#0c2658;
   }
   
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
+   /* image de fond de l'accueil et texte utiliser*/
   body {
     font-family: 'Georgia', serif;
     color: var(--blanc);
@@ -19,6 +18,7 @@
     background-size: cover;
   }
   
+  /*position des liens de navigatuons */
   header {
     display: flex;
     justify-content: space-between;
@@ -28,28 +28,33 @@
     color: #222;
   }
   
+  /*position des logos internet*/
   .logo-social {
     display: flex;
     align-items: center;
     gap: 15px;
   }
   
+  /* grosseur du logo*/
   .logo {
     width: 40%;
   }
   
+  /* grosseur des logosm internet*/
   .social-icons img {
     width: 25px;
     margin-right: 8px;
     cursor: pointer;
   }
   
+  /*Grosseur et couleur des texte dans la barre de navigation*/
   nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
   }
   
+  /*Grosseur et couleur des texte dans la barre de navigation*/
   nav a {
     text-decoration: none;
     color: #003366;
@@ -59,6 +64,7 @@
     font-size: 14px;
   }
   
+  /* position de l'image de fond*/
   .hero {
     background-image: url('background-rennes.jpg'); /* à remplacer par ton image */
     background-size: cover;
@@ -74,11 +80,13 @@
     
   }
   
+   /* grosseur et position des dates*/
   .dates {
     font-size: 45px;
     margin-bottom: 10px;
   }
   
+  /* grossuer et position du titre*/
   .hero h1 {
     font-size: 110px;
     line-height: 1.2;
@@ -86,24 +94,88 @@
     font-weight: 600;
   }
   
+  /* grosseur et position des textes*/
   .announcement h2 {
     font-size: 30px;
     margin-bottom: 10px;
   }
   
+  /* grosseur et position des textes*/
   .announcement p {
     font-size: 20px;
     line-height: 1.5;
   }
   
-  
+   /*grosseur du fond */
   .fond_accueil {
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
   }
   
+  /*position du footer*/
   .footer {
     margin-left: 50%;
   }
 
+  /*Animation des flocons de neige*/
+    .snowflake {
+      position: absolute;
+      top: -10px;
+      color: white;
+      font-size: 1em;
+      user-select: none;
+      z-index: 9999;
+      animation-name: fall;
+      animation-timing-function: linear;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh);
+        opacity: 0.2;
+      }
+    }
+  
+
+     @media (max-width: 1023px) {
+    
+     /* Bouton burger positionné en haut à droite */
+    .burger {
+      font-size: 30px;
+      background: none;
+      border: none;
+      color: var(--blanc);
+      cursor: pointer;
+      display: block;
+      position: absolute;
+      top: 15px;
+      right: 15px;
+    }
+  
+    /* Menu de navigation caché par défaut */
+    .nav-menu {
+      display: none;
+      background-color: var(--bleu_fonce);
+      width: 100%;
+    }
+  
+    /* Menu visible quand actif */
+    .nav-menu.active {
+      display: block;
+    }
+  
+    /* Liste menu verticale, centrée */
+    .nav-menu ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 0;
+      list-style: none;
+    }
+  }
